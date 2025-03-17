@@ -1588,44 +1588,54 @@ section,
 .gallery .gallery-carousel {
   overflow: hidden;
   width: 100%;
-  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .gallery .carousel-slide {
   display: flex;
-  width: 200%; /* 16 imagens (8 originais + 8 repetidas) */
-  animation: slide 32s infinite linear; /* Animação contínua */
+  width: 175%; /* Ajustado para 7 imagens (4 visíveis + 3 seguintes) */
+  animation: slide 14s infinite linear; /* Ajustado para 14 segundos (2 segundos por imagem) */
 }
 
 @keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* Move até a metade para mostrar as imagens repetidas */
-  }
+  0% { transform: translateX(0); }
+  57.14% { transform: translateX(-57.14%); } /* 100% / 7 * 4 */
+  100% { transform: translateX(0); }
 }
 
-.gallery .carousel-slide .gallery-item {
-  flex: 0 0 12.5%; /* Cada item ocupa 12.5% da largura total (100% / 8 itens visíveis por vez) */
+.gallery .gallery-item {
+  flex: 0 0 25%; /* Cada item ocupa 25% da largura (4 imagens por vez) */
   overflow: hidden;
-  border-right: 2px solid var(--background-color, #ccc);
-  border-bottom: 2px solid var(--background-color, #ccc);
+  border: 2px solid var(--background-color, #ccc);
+  margin: 5px;
+  box-sizing: border-box;
 }
 
-.gallery .carousel-slide .gallery-item img {
+.gallery .gallery-item img {
   width: 100%;
   height: auto;
-  transition: all ease-in-out 0.4s;
+  display: block;
+  transition: transform 0.4s ease-in-out;
 }
 
-.gallery .carousel-slide .gallery-item:hover img {
-  transform: scale(1.1);
+.gallery .gallery-item:hover img {
+  transform: scale(1.05); /* Efeito leve de zoom ao passar o mouse */
 }
 
-/* Opcional: Pausar ao passar o mouse */
 .gallery .carousel-slide:hover {
-  animation-play-state: paused;
+  animation-play-state: paused; /* Pausa ao passar o mouse */
+}
+
+/* Ajuste responsivo para manter compacto */
+@media (max-width: 768px) {
+  .gallery .gallery-item {
+    flex: 0 0 50%; /* 2 imagens por vez em telas menores */
+  }
+  .gallery .carousel-slide {
+    width: 100%; /* Ajusta a largura para 4 imagens totais */
+    animation: none; /* Desativa animação em telas menores */
+  }
 }
 /*--------------------------------------------------------------
 # Contact Section
