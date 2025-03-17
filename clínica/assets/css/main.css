@@ -1581,66 +1581,51 @@ section,
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
-.gallery .gallery-fixed {
-  display: flex;
-  flex-wrap: wrap;
+.gallery {
+  padding: 20px 0;
 }
 
-.gallery .gallery-item {
+.gallery .gallery-carousel {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.gallery .carousel-slide {
+  display: flex;
+  width: 200%; /* 16 imagens (8 originais + 8 repetidas) */
+  animation: slide 32s infinite linear; /* Animação contínua */
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move até a metade para mostrar as imagens repetidas */
+  }
+}
+
+.gallery .carousel-slide .gallery-item {
+  flex: 0 0 12.5%; /* Cada item ocupa 12.5% da largura total (100% / 8 itens visíveis por vez) */
   overflow: hidden;
   border-right: 2px solid var(--background-color, #ccc);
   border-bottom: 2px solid var(--background-color, #ccc);
 }
 
-.gallery .gallery-item img {
+.gallery .carousel-slide .gallery-item img {
   width: 100%;
   height: auto;
   transition: all ease-in-out 0.4s;
 }
 
-.gallery .gallery-item:hover img {
+.gallery .carousel-slide .gallery-item:hover img {
   transform: scale(1.1);
 }
 
-.gallery .gallery-carousel {
-  position: relative;
-  overflow: hidden;
-  margin-top: 20px;
-}
-
-.gallery .carousel-container {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-}
-
-.gallery .carousel-slide {
-  display: flex;
-  width: 100%;
-}
-
-.gallery .carousel-slide .gallery-item {
-  flex: 0 0 25%; /* Cada item ocupa 25% da largura (4 por slide) */
-}
-
-.gallery .carousel-prev,
-.gallery .carousel-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 10;
-}
-
-.gallery .carousel-prev {
-  left: 0;
-}
-
-.gallery .carousel-next {
-  right: 0;
+/* Opcional: Pausar ao passar o mouse */
+.gallery .carousel-slide:hover {
+  animation-play-state: paused;
 }
 /*--------------------------------------------------------------
 # Contact Section
