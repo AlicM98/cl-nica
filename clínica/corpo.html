@@ -467,53 +467,53 @@
 
     </section><!-- /Doctors Section -->
 
-    
-
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery section">
+   <section id="gallery" class="gallery section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Conheça Nossa Clínica</h2>
+  </div><!-- End Section Title -->
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Conheça Nossa Clínica</h2>
-        
-      </div><!-- End Section Title -->
+  <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+    <!-- Primeiras 4 imagens fixas -->
+    <div class="row g-0 gallery-fixed">
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="assets/img/gallery/gallery-1.jpg" class="glightbox" data-gallery="images-gallery">
+            <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
 
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="assets/img/gallery/gallery-2.jpg" class="glightbox" data-gallery="images-gallery">
+            <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
 
-        <div class="row g-0">
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="assets/img/gallery/gallery-3.jpg" class="glightbox" data-gallery="images-gallery">
+            <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-1.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-1.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
+      <div class="col-lg-3 col-md-4">
+        <div class="gallery-item">
+          <a href="assets/img/gallery/gallery-4.jpg" class="glightbox" data-gallery="images-gallery">
+            <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div><!-- End Gallery Item -->
+    </div>
 
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-2.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-2.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-3.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-3.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img/gallery/gallery-4.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img/gallery/gallery-4.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div><!-- End Gallery Item -->
-
+    <!-- Carrossel para as últimas 4 imagens -->
+    <div class="gallery-carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide row g-0">
           <div class="col-lg-3 col-md-4">
             <div class="gallery-item">
               <a href="assets/img/gallery/gallery-5.jpg" class="glightbox" data-gallery="images-gallery">
@@ -545,12 +545,13 @@
               </a>
             </div>
           </div><!-- End Gallery Item -->
-
         </div>
-
       </div>
-
-    </section><!-- /Gallery Section -->
+      <button class="carousel-prev">⬅</button>
+      <button class="carousel-next">➡</button>
+    </div>
+  </div>
+</section><!-- /Gallery Section -->
 
     <!-- Faq Section -->
     <section id="faq" class="faq section light-background">
@@ -845,6 +846,43 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  const carouselContainer = document.querySelector('.gallery .carousel-container');
+  const slides = document.querySelector('.gallery .carousel-slide');
+  const prevBtn = document.querySelector('.gallery .carousel-prev');
+  const nextBtn = document.querySelector('.gallery .carousel-next');
+  let slideWidth = document.querySelector('.gallery .gallery-item').offsetWidth; // Largura do item
+  let currentIndex = 0;
+  const totalSlides = Math.ceil(slides.children.length / 4); // 4 itens por slide
+
+  function updateCarousel() {
+    carouselContainer.style.transform = `translateX(-${currentIndex * slideWidth * 4}px)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex < totalSlides - 1) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  // Ajuste responsivo
+  window.addEventListener('resize', () => {
+    slideWidth = document.querySelector('.gallery .gallery-item').offsetWidth;
+    updateCarousel();
+  });
+});
+
+</script>  
+    
 </body>
 
 </html>
