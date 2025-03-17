@@ -1582,7 +1582,7 @@ section,
 # Gallery Section
 --------------------------------------------------------------*/
 .gallery {
-  padding: 20px 0;
+  padding: 10px 0; /* Reduzido o padding para maior compactação */
 }
 
 .gallery .gallery-carousel {
@@ -1595,7 +1595,7 @@ section,
 .gallery .carousel-slide {
   display: flex;
   width: 175%; /* Ajustado para 7 imagens (4 visíveis + 3 seguintes) */
-  animation: slide 14s infinite linear; /* Ajustado para 14 segundos (2 segundos por imagem) */
+  animation: slide 14s infinite linear; /* 14 segundos para um ciclo completo */
 }
 
 @keyframes slide {
@@ -1607,8 +1607,8 @@ section,
 .gallery .gallery-item {
   flex: 0 0 25%; /* Cada item ocupa 25% da largura (4 imagens por vez) */
   overflow: hidden;
-  border: 2px solid var(--background-color, #ccc);
-  margin: 5px;
+  border: 1px solid var(--background-color, #ccc); /* Borda mais fina */
+  margin: 2px; /* Margem reduzida para compactação */
   box-sizing: border-box;
 }
 
@@ -1627,14 +1627,31 @@ section,
   animation-play-state: paused; /* Pausa ao passar o mouse */
 }
 
-/* Ajuste responsivo para manter compacto */
+/* Ajuste responsivo para celular (compacto) */
 @media (max-width: 768px) {
-  .gallery .gallery-item {
-    flex: 0 0 50%; /* 2 imagens por vez em telas menores */
+  .gallery {
+    padding: 5px 0; /* Padding ainda menor em celular */
   }
+
+  .gallery .gallery-carousel {
+    max-width: 100%; /* Usa toda a largura disponível */
+  }
+
   .gallery .carousel-slide {
-    width: 100%; /* Ajusta a largura para 4 imagens totais */
-    animation: none; /* Desativa animação em telas menores */
+    width: 100%; /* Ajusta para 2 imagens visíveis */
+    animation: slideMobile 7s infinite linear; /* Animação ajustada para 2 imagens */
+  }
+
+  @keyframes slideMobile {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .gallery .gallery-item {
+    flex: 0 0 50%; /* 2 imagens por vez em celular */
+    border: 1px solid var(--background-color, #ccc); /* Mantém borda fina */
+    margin: 1px; /* Margem mínima para compactação */
   }
 }
 /*--------------------------------------------------------------
