@@ -1581,28 +1581,66 @@ section,
 /*--------------------------------------------------------------
 # Gallery Section
 --------------------------------------------------------------*/
- .gallery {
+.gallery .gallery-fixed {
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
-  gap: 10px; /* Espaçamento entre os itens */
+  flex-wrap: wrap;
 }
 
 .gallery .gallery-item {
   overflow: hidden;
-  border-right: 2px solid var(--background-color);
-  border-bottom: 2px solid var(--background-color);
-  flex: 1 1 calc(33.33% - 10px); /* Cada item ocupa aproximadamente 1/3 da largura, ajustado pelo gap */
-  min-width: 0; /* Garante que os itens não ultrapassem o contêiner */
+  border-right: 2px solid var(--background-color, #ccc);
+  border-bottom: 2px solid var(--background-color, #ccc);
 }
 
 .gallery .gallery-item img {
-  width: 100%; /* Faz a imagem ocupar toda a largura do item */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 100%;
+  height: auto;
   transition: all ease-in-out 0.4s;
 }
 
 .gallery .gallery-item:hover img {
   transform: scale(1.1);
+}
+
+.gallery .gallery-carousel {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.gallery .carousel-container {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.gallery .carousel-slide {
+  display: flex;
+  width: 100%;
+}
+
+.gallery .carousel-slide .gallery-item {
+  flex: 0 0 25%; /* Cada item ocupa 25% da largura (4 por slide) */
+}
+
+.gallery .carousel-prev,
+.gallery .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.gallery .carousel-prev {
+  left: 0;
+}
+
+.gallery .carousel-next {
+  right: 0;
 }
 /*--------------------------------------------------------------
 # Contact Section
