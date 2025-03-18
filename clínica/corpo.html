@@ -112,7 +112,7 @@
   <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="hero-img">
 
   <div class="container position-relative">
-    <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
+    <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100" style="margin-left: -30px;">
       <h2>BEM-VINDO A</h2>
       <h2>CLÍNICA DURSO</h2>
       <p>Saúde e Estética: <br>
@@ -150,15 +150,16 @@
   max-width: 100%;
 }
 
+/* Mantém o layout original em telas grandes */
 .welcome {
-  text-align: left; /* Padrão para desktop */
+  text-align: left;
 }
 
 .why-box {
-  text-align: left; /* Padrão para desktop */
+  text-align: left;
 }
 
-/* Media query para mobile (telas menores que 992px) */
+/* Ajustes apenas para mobile (telas menores que 992px) */
 @media (max-width: 991px) {
   .welcome {
     text-align: center; /* Centraliza o texto no mobile */
