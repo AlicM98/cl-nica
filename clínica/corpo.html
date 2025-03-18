@@ -150,43 +150,30 @@
   max-width: 100%;
 }
 
-/* Mantém o layout original em telas grandes */
-.welcome {
-  text-align: left;
-}
-
-.why-box {
-  text-align: left;
-}
+/* Sem alterações no CSS base para desktop, mantendo o layout original */
 
 /* Ajustes apenas para mobile (telas menores que 992px) */
 @media (max-width: 991px) {
   .welcome {
-    text-align: center; /* Centraliza o texto no mobile */
-    margin-left: 0; /* Remove o margin-left negativo no mobile */
-    padding: 0 15px; /* Adiciona padding para não colar nas bordas */
+    text-align: center;
+    margin-left: 0; /* Remove o deslocamento no mobile */
+    padding: 0 15px;
   }
 
   .why-box {
-    text-align: center; /* Centraliza o texto no mobile */
-    padding: 0 15px; /* Adiciona padding para consistência */
+    text-align: center;
+    padding: 0 15px;
   }
 
   .content .col-lg-4 {
-    margin: 0 auto; /* Centraliza o bloco why-box no mobile */
-    max-width: 100%; /* Garante que não exceda a largura do contêiner */
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .hero-img {
-    margin: 0 auto; /* Centraliza a imagem no mobile */
+    margin: 0 auto;
     max-width: 100%;
   }
-}
-
-/* Garante que o container seja responsivo */
-.container {
-  max-width: 100%;
-  padding: 0 15px;
 }
 </style>
 
