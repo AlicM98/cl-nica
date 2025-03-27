@@ -350,7 +350,7 @@
         <div class="team-item flex-shrink-0 mx-2" data-aos="fade-up" data-aos-delay="100">
           <div class="team-member card border-0 shadow-lg overflow-hidden">
             <div class="pic position-relative">
-              <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt="Dra. Nathalia Xavier" style="width: 100%; height: 200px; object-fit: cover; object-position: center; transition: transform 0.3s ease;">
+              <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid" alt="Dra. Nathalia Xavier" style="width: 100%; height: 200px; object-fit: contain; object-position: center; background: #f8f9fa; transition: transform 0.3s ease;">
               <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.2); opacity: 0; transition: opacity 0.3s ease;"></div>
             </div>
             <div class="member-info p-4 text-center bg-white">
@@ -366,7 +366,7 @@
         <div class="team-item flex-shrink-0 mx-2" data-aos="fade-up" data-aos-delay="200">
           <div class="team-member card border-0 shadow-lg overflow-hidden">
             <div class="pic position-relative">
-              <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt="Guilherme Durso" style="width: 100%; height: 200px; object-fit: cover; object-position: center; transition: transform 0.3s ease;">
+              <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid" alt="Guilherme Durso" style="width: 100%; height: 200px; object-fit: contain; object-position: center; background: #f8f9fa; transition: transform 0.3s ease;">
               <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.2); opacity: 0; transition: opacity 0.3s ease;"></div>
             </div>
             <div class="member-info p-4 text-center bg-white">
@@ -382,7 +382,7 @@
         <div class="team-item flex-shrink-0 mx-2" data-aos="fade-up" data-aos-delay="300">
           <div class="team-member card border-0 shadow-lg overflow-hidden">
             <div class="pic position-relative">
-              <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt="Dra. Sarah Rosa" style="width: 100%; height: 200px; object-fit: cover; object-position: center; transition: transform 0.3s ease;">
+              <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid" alt="Dra. Sarah Rosa" style="width: 100%; height: 200px; object-fit: contain; object-position: center; background: #f8f9fa; transition: transform 0.3s ease;">
               <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.2); opacity: 0; transition: opacity 0.3s ease;"></div>
             </div>
             <div class="member-info p-4 text-center bg-white">
@@ -398,7 +398,7 @@
         <div class="team-item flex-shrink-0 mx-2" data-aos="fade-up" data-aos-delay="400">
           <div class="team-member card border-0 shadow-lg overflow-hidden">
             <div class="pic position-relative">
-              <img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt="Matheus Rodrigues" style="width: 100%; height: 200px; object-fit: cover; object-position: center; transition: transform 0.3s ease;">
+              <img src="assets/img/doctors/doctors-4.jpg" class="img-fluid" alt="Matheus Rodrigues" style="width: 100%; height: 200px; object-fit: contain; object-position: center; background: #f8f9fa; transition: transform 0.3s ease;">
               <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.2); opacity: 0; transition: opacity 0.3s ease;"></div>
             </div>
             <div class="member-info p-4 text-center bg-white">
@@ -414,7 +414,7 @@
         <div class="team-item flex-shrink-0 mx-2" data-aos="fade-up" data-aos-delay="500">
           <div class="team-member card border-0 shadow-lg overflow-hidden">
             <div class="pic position-relative">
-              <img src="assets/img/doctors/doctors-5.jpg" class="img-fluid" alt="Isabela Rangel" style="width: 100%; height: 200px; object-fit: cover; object-position: center; transition: transform 0.3s ease;">
+              <img src="assets/img/doctors/doctors-5.jpg" class="img-fluid" alt="Isabela Rangel" style="width: 100%; height: 200px; object-fit: contain; object-position: center; background: #f8f9fa; transition: transform 0.3s ease;">
               <div class="overlay position-absolute top-0 start-0 w-100 h-100" style="background: rgba(0, 0, 0, 0.2); opacity: 0; transition: opacity 0.3s ease;"></div>
             </div>
             <div class="member-info p-4 text-center bg-white">
@@ -451,11 +451,28 @@
     background: #f1f1f1;
   }
   .team-item {
-    width: 280px; /* Largura fixa para cada item */
+    width: 280px; /* Largura fixa para todos os itens */
+    height: 350px; /* Altura fixa para uniformizar os cards */
+    display: flex;
+    flex-direction: column;
   }
   .team-member {
+    flex: 1; /* Faz o card ocupar todo o espaço disponível no team-item */
+    display: flex;
+    flex-direction: column;
     transition: all 0.3s ease;
     border-radius: 12px;
+  }
+  .pic {
+    flex: 0 0 200px; /* Altura fixa para a imagem */
+    overflow: hidden;
+  }
+  .member-info {
+    flex: 1; /* Faz a área de informações ocupar o espaço restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(180deg, #ffffff, #f8f9fa);
   }
   .team-member:hover {
     transform: translateY(-8px);
@@ -467,9 +484,6 @@
   .team-member:hover .overlay {
     opacity: 1;
   }
-  .member-info {
-    background: linear-gradient(180deg, #ffffff, #f8f9fa);
-  }
   .social a {
     transition: color 0.3s ease;
   }
@@ -479,9 +493,10 @@
   @media (max-width: 576px) {
     .team-item {
       width: 250px; /* Menor largura em telas pequenas */
+      height: 320px; /* Altura ajustada para telas pequenas */
     }
-    .team-member .pic img {
-      height: 180px; /* Ajuste de altura para evitar cortes */
+    .pic {
+      flex: 0 0 180px; /* Altura ajustada para a imagem em telas pequenas */
     }
     .member-info {
       padding: 1.5rem !important;
@@ -490,9 +505,10 @@
   @media (min-width: 992px) {
     .team-item {
       width: 300px; /* Maior largura em telas grandes */
+      height: 380px; /* Altura ajustada para telas grandes */
     }
-    .team-member .pic img {
-      height: 220px; /* Altura maior para desktops */
+    .pic {
+      flex: 0 0 220px; /* Altura ajustada para a imagem em telas grandes */
     }
   }
 </style>
