@@ -346,14 +346,13 @@
   <div class="container">
     <div class="carousel-wrapper">
       <div class="team-carousel d-flex flex-nowrap overflow-auto pb-3">
-
         <!-- Dra. Nathalia Xavier -->
         <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="100">
           <div class="team-member card border-0 shadow-lg overflow-hidden h-100">
-            <div class="pic d-flex align-items-center justify-content-center p-3">
+            <div class="pic d-flex align-items-center justify-content-center p-2">
               <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid rounded-circle team-img" alt="Dra. Nathalia Xavier">
             </div>
-            <div class="member-info text-center bg-white p-3">
+            <div class="member-info text-center bg-white p-2">
               <h4 class="fs-6 fw-bold text-dark mb-1">Dra. Nathalia Xavier</h4>
               <span class="text-muted small d-block mb-2">Harmonização Facial/Corporal</span>
               <div class="social">
@@ -368,10 +367,10 @@
         <!-- Guilherme Durso -->
         <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="200">
           <div class="team-member card border-0 shadow-lg overflow-hidden h-100">
-            <div class="pic d-flex align-items-center justify-content-center p-3">
+            <div class="pic d-flex align-items-center justify-content-center p-2">
               <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid rounded-circle team-img" alt="Guilherme Durso">
             </div>
-            <div class="member-info text-center bg-white p-3">
+            <div class="member-info text-center bg-white p-2">
               <h4 class="fs-6 fw-bold text-dark mb-1">Guilherme Durso</h4>
               <span class="text-muted small d-block mb-2">Nutricionista</span>
               <div class="social">
@@ -386,10 +385,10 @@
         <!-- Dra. Sarah Rosa -->
         <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="300">
           <div class="team-member card border-0 shadow-lg overflow-hidden h-100">
-            <div class="pic d-flex align-items-center justify-content-center p-3">
+            <div class="pic d-flex align-items-center justify-content-center p-2">
               <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid rounded-circle team-img" alt="Dra. Sarah Rosa">
             </div>
-            <div class="member-info text-center bg-white p-3">
+            <div class="member-info text-center bg-white p-2">
               <h4 class="fs-6 fw-bold text-dark mb-1">Dra. Sarah Rosa</h4>
               <span class="text-muted small d-block mb-2">Cirurgiã Dentista</span>
               <div class="social">
@@ -404,10 +403,10 @@
         <!-- Matheus Rodrigues -->
         <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="400">
           <div class="team-member card border-0 shadow-lg overflow-hidden h-100">
-            <div class="pic d-flex align-items-center justify-content-center p-3">
+            <div class="pic d-flex align-items-center justify-content-center p-2">
               <img src="assets/img/doctors/doctors-4.jpg" class="img-fluid rounded-circle team-img" alt="Matheus Rodrigues">
             </div>
-            <div class="member-info text-center bg-white p-3">
+            <div class="member-info text-center bg-white p-2">
               <h4 class="fs-6 fw-bold text-dark mb-1">Matheus Rodrigues</h4>
               <span class="text-muted small d-block mb-2">Massoterapeuta</span>
               <div class="social">
@@ -422,10 +421,10 @@
         <!-- Isabela Rangel -->
         <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="500">
           <div class="team-member card border-0 shadow-lg overflow-hidden h-100">
-            <div class="pic d-flex align-items-center justify-content-center p-3">
+            <div class="pic d-flex align-items-center justify-content-center p-2">
               <img src="assets/img/doctors/doctors-5.jpg" class="img-fluid rounded-circle team-img" alt="Isabela Rangel">
             </div>
-            <div class="member-info text-center bg-white p-3">
+            <div class="member-info text-center bg-white p-2">
               <h4 class="fs-6 fw-bold text-dark mb-1">Isabela Rangel</h4>
               <span class="text-muted small d-block mb-2">Biomédica</span>
               <div class="social">
@@ -436,7 +435,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -466,7 +464,7 @@
   }
 
   .team-item {
-    width: 170px; /* Reduz a largura dos cards */
+    width: 150px; /* Cards ainda menores */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -476,18 +474,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 270px; /* Ajusta a altura mínima dos cards */
-    border-radius: 12px;
+    min-height: 220px; /* Altura reduzida dos cards */
+    border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
   .team-member:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15) !important;
   }
 
   .pic {
-    height: 120px; /* Reduz a altura da imagem */
+    height: 100px; /* Área da imagem reduzida */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -495,12 +493,12 @@
   }
 
   .team-img {
-    width: 100px; /* Reduz a largura da imagem */
-    height: 100px; /* Reduz a altura da imagem */
+    width: 80px; /* Imagens menores */
+    height: 80px; /* Imagens menores e proporcionais */
     object-fit: cover;
     object-position: center;
-    border-radius: 50%; /* Mantém as imagens redondas */
-    transition: none; /* Remove o efeito de zoom */
+    border-radius: 50%; /* Totalmente circular */
+    border: 2px solid #fff; /* Borda branca para destacar como foto de perfil */
   }
 
   .member-info {
@@ -518,43 +516,42 @@
 
   @media (max-width: 576px) {
     .team-item {
-      width: 150px; /* Ajusta ainda mais a largura dos cards */
+      width: 130px; /* Cards menores em telas pequenas */
     }
 
     .team-member {
-      min-height: 240px; /* Ajusta a altura mínima dos cards */
+      min-height: 200px;
     }
 
     .team-img {
-      width: 80px; /* Ajusta a largura das imagens */
-      height: 80px; /* Ajusta a altura das imagens */
+      width: 70px;
+      height: 70px;
     }
 
     .pic {
-      height: 100px;
+      height: 90px;
     }
   }
 
   @media (min-width: 992px) {
     .team-item {
-      width: 180px; /* Ajusta a largura dos cards para telas grandes */
+      width: 160px; /* Ligeiro aumento em telas grandes */
     }
 
     .team-member {
-      min-height: 300px; /* Ajusta a altura mínima dos cards */
+      min-height: 240px;
     }
 
     .pic {
-      height: 140px;
+      height: 110px;
     }
 
     .team-img {
-      width: 110px;
-      height: 110px;
+      width: 90px;
+      height: 90px;
     }
   }
 </style>
-
 
           <!-- <p>Este parágrafo está comentado e não será exibido.</p> -->
 
