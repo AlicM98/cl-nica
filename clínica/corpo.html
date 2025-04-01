@@ -345,11 +345,11 @@
 
   <div class="container">
     <div class="carousel-wrapper">
-      <div class="team-carousel d-flex overflow-auto pb-3">
+      <div class="row justify-content-start overflow-auto">
 
         <!-- Dra. Nathalia Xavier -->
-        <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="100">
-          <div class="team-member card border-0 shadow-sm text-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="card border-0 shadow-sm text-center">
             <div class="card-body">
               <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid rounded-circle mb-3 team-img" alt="Dra. Nathalia Xavier">
               <h4 class="fs-6 fw-bold text-dark mb-1">Dra. Nathalia Xavier</h4>
@@ -364,8 +364,8 @@
         </div>
 
         <!-- Guilherme Durso -->
-        <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="200">
-          <div class="team-member card border-0 shadow-sm text-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="card border-0 shadow-sm text-center">
             <div class="card-body">
               <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid rounded-circle mb-3 team-img" alt="Guilherme Durso">
               <h4 class="fs-6 fw-bold text-dark mb-1">Guilherme Durso</h4>
@@ -380,8 +380,8 @@
         </div>
 
         <!-- Dra. Sarah Rosa -->
-        <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="300">
-          <div class="team-member card border-0 shadow-sm text-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="card border-0 shadow-sm text-center">
             <div class="card-body">
               <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid rounded-circle mb-3 team-img" alt="Dra. Sarah Rosa">
               <h4 class="fs-6 fw-bold text-dark mb-1">Dra. Sarah Rosa</h4>
@@ -396,8 +396,8 @@
         </div>
 
         <!-- Matheus Rodrigues -->
-        <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="400">
-          <div class="team-member card border-0 shadow-sm text-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="card border-0 shadow-sm text-center">
             <div class="card-body">
               <img src="assets/img/doctors/doctors-4.jpg" class="img-fluid rounded-circle mb-3 team-img" alt="Matheus Rodrigues">
               <h4 class="fs-6 fw-bold text-dark mb-1">Matheus Rodrigues</h4>
@@ -412,8 +412,8 @@
         </div>
 
         <!-- Isabela Rangel -->
-        <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="500">
-          <div class="team-member card border-0 shadow-sm text-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="card border-0 shadow-sm text-center">
             <div class="card-body">
               <img src="assets/img/doctors/doctors-5.jpg" class="img-fluid rounded-circle mb-3 team-img" alt="Isabela Rangel">
               <h4 class="fs-6 fw-bold text-dark mb-1">Isabela Rangel</h4>
@@ -433,29 +433,27 @@
 </section>
 
 <style>
-  .team-carousel {
+  .row {
     display: flex;
-    overflow-x: scroll; /* Habilita a rolagem horizontal */
-    gap: 20px; /* Ajusta o espaçamento entre os cards */
-    padding-bottom: 20px; /* Ajuste para dar espaço inferior */
-    scroll-snap-type: x mandatory; /* Suaviza a rolagem */
+    overflow-x: auto; /* Adiciona a rolagem horizontal */
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+
+  .col-12 {
+    flex-shrink: 0;
   }
 
   .team-item {
-    flex-shrink: 0;
-    width: 220px; /* Ajusta a largura para cards menores */
+    display: flex;
+    justify-content: center;
   }
 
   .team-member {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 320px; /* Altura ajustada para os cards */
     border-radius: 12px;
     background: #fff;
+    transition: transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    scroll-snap-align: start; /* Faz a rolagem "grudar" nos itens */
   }
 
   .team-member:hover {
@@ -464,7 +462,7 @@
   }
 
   .team-img {
-    width: 100px; /* Tamanho da imagem ajustado */
+    width: 100px; /* Ajuste o tamanho da imagem */
     height: 100px;
     object-fit: cover;
     object-position: center;
@@ -474,7 +472,7 @@
   }
 
   .card-body {
-    padding: 1rem;
+    padding: 1.25rem;
   }
 
   .social a {
@@ -484,15 +482,7 @@
   .social a:hover {
     color: #0d6efd !important;
   }
-
-  /* Responsividade */
-  @media (max-width: 576px) {
-    .team-item {
-      width: 160px; /* Ajustado para telas pequenas */
-    }
-  }
 </style>
-
 
           <!-- <p>Este parágrafo está comentado e não será exibido.</p> -->
 
