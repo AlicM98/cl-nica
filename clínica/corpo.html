@@ -466,7 +466,7 @@
   }
 
   .team-item {
-    width: 220px; /* Diminui a largura do card */
+    width: 200px; /* Diminui a largura do card */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -476,7 +476,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 300px; /* Diminui a altura mínima do card */
+    min-height: 280px; /* Diminui a altura mínima do card */
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -487,7 +487,7 @@
   }
 
   .pic {
-    height: 140px; /* Diminui a altura da imagem */
+    height: 130px; /* Diminui a altura da imagem */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -495,16 +495,12 @@
   }
 
   .team-img {
-    width: 120px; /* Diminui a largura da imagem */
-    height: 120px; /* Diminui a altura da imagem */
+    width: 110px; /* Diminui a largura da imagem */
+    height: 110px; /* Diminui a altura da imagem */
     object-fit: cover;
     object-position: center;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-  }
-
-  .team-member:hover .team-img {
-    transform: scale(1.05);
+    border-radius: 50%; /* Mantém a forma redonda */
+    transition: none; /* Remove o efeito de zoom */
   }
 
   .member-info {
@@ -522,42 +518,43 @@
 
   @media (max-width: 576px) {
     .team-item {
-      width: 200px; /* Ajusta a largura para telas pequenas */
+      width: 180px; /* Ajusta a largura para telas pequenas */
     }
 
     .team-member {
-      min-height: 270px; /* Ajusta a altura mínima do card */
+      min-height: 250px; /* Ajusta a altura mínima do card */
     }
 
     .team-img {
-      width: 110px; /* Ajusta a largura da imagem */
-      height: 110px; /* Ajusta a altura da imagem */
+      width: 100px; /* Ajusta a largura da imagem */
+      height: 100px; /* Ajusta a altura da imagem */
     }
 
     .pic {
-      height: 130px;
+      height: 120px;
     }
   }
 
   @media (min-width: 992px) {
     .team-item {
-      width: 230px; /* Ajusta a largura para telas grandes */
+      width: 210px; /* Ajusta a largura para telas grandes */
     }
 
     .team-member {
-      min-height: 330px; /* Ajusta a altura mínima do card */
+      min-height: 310px; /* Ajusta a altura mínima do card */
     }
 
     .pic {
-      height: 160px;
+      height: 150px;
     }
 
     .team-img {
-      width: 140px;
-      height: 140px;
+      width: 120px;
+      height: 120px;
     }
   }
 </style>
+
 
 
           <!-- <p>Este parágrafo está comentado e não será exibido.</p> -->
