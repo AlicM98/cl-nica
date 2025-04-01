@@ -345,7 +345,7 @@
 
   <div class="container">
     <div class="carousel-wrapper">
-      <div class="team-carousel d-flex flex-nowrap overflow-auto pb-3">
+      <div class="team-carousel d-flex flex-wrap justify-content-center overflow-auto pb-3">
 
         <!-- Dra. Nathalia Xavier -->
         <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="100">
@@ -454,19 +454,19 @@
   }
 
   .team-item {
-    width: 180px; /* Largura ajustada para um layout mais compacto */
+    width: 160px; /* Tamanho reduzido para tornar os cards menores */
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin: 0 10px;
+    margin: 10px;
   }
 
   .team-member {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 280px; /* Ajustado para uma altura mais compacta */
-    border-radius: 10px;
+    min-height: 260px; /* Tamanho ajustado para um layout mais compacto */
+    border-radius: 12px;
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -478,7 +478,7 @@
   }
 
   .pic {
-    height: 110px; /* Tamanho ajustado da imagem */
+    height: 100px; /* Ajuste na área da imagem */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -486,11 +486,11 @@
   }
 
   .team-img {
-    width: 90px; /* Ajuste de tamanho para imagens */
-    height: 90px;
+    width: 80px; /* Ajuste para imagens mais pequenas */
+    height: 80px;
     object-fit: cover;
     object-position: center;
-    border-radius: 50%; /* Imagem redonda */
+    border-radius: 50%; /* Deixa a imagem redonda */
     border: 3px solid #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
@@ -510,20 +510,20 @@
 
   @media (max-width: 576px) {
     .team-item {
-      width: 160px; /* Ajustado para telas pequenas */
+      width: 130px; /* Ajuste para telas pequenas */
     }
 
     .team-member {
-      min-height: 240px; /* Altura ajustada para telas pequenas */
+      min-height: 230px;
     }
 
     .pic {
-      height: 100px;
+      height: 80px;
     }
 
     .team-img {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
     }
 
     .member-info {
@@ -533,23 +533,24 @@
 
   @media (min-width: 992px) {
     .team-item {
-      width: 220px; /* Ajustado para telas grandes */
+      width: 180px; /* Ajuste para telas grandes */
     }
 
     .team-member {
-      min-height: 320px; /* Altura ajustada para telas grandes */
+      min-height: 300px;
     }
 
     .pic {
-      height: 130px;
+      height: 120px;
     }
 
     .team-img {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
     }
   }
 </style>
+
 
 
           <!-- <p>Este parágrafo está comentado e não será exibido.</p> -->
