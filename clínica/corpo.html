@@ -348,7 +348,7 @@
       <div class="team-carousel d-flex flex-nowrap overflow-auto pb-3">
 
         <!-- Dra. Nathalia Xavier -->
-        <div class="team-item flex-shrink-0 mx-2" data-aos="fade-up" data-aos-delay="100">
+        <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="100">
           <div class="team-member card border-0 shadow-lg overflow-hidden h-100">
             <div class="pic d-flex align-items-center justify-content-center p-3">
               <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid rounded-circle team-img" alt="Dra. Nathalia Xavier">
@@ -366,7 +366,7 @@
         </div>
 
         <!-- Guilherme Durso -->
-        <div class="team-item flex-shrink-0 mx-2" data-aos="fade-up" data-aos-delay="200">
+        <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="200">
           <div class="team-member card border-0 shadow-lg overflow-hidden h-100">
             <div class="pic d-flex align-items-center justify-content-center p-3">
               <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid rounded-circle team-img" alt="Guilherme Durso">
@@ -384,7 +384,7 @@
         </div>
 
         <!-- Dra. Sarah Rosa -->
-        <div class="team-item flex-shrink-0 mx-2" data-aos="fade-up" data-aos-delay="300">
+        <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="300">
           <div class="team-member card border-0 shadow-lg overflow-hidden h-100">
             <div class="pic d-flex align-items-center justify-content-center p-3">
               <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid rounded-circle team-img" alt="Dra. Sarah Rosa">
@@ -402,7 +402,7 @@
         </div>
 
         <!-- Matheus Rodrigues -->
-        <div class="team-item flex-shrink-0 mx-2" data-aos="fade-up" data-aos-delay="400">
+        <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="400">
           <div class="team-member card border-0 shadow-lg overflow-hidden h-100">
             <div class="pic d-flex align-items-center justify-content-center p-3">
               <img src="assets/img/doctors/doctors-4.jpg" class="img-fluid rounded-circle team-img" alt="Matheus Rodrigues">
@@ -420,7 +420,7 @@
         </div>
 
         <!-- Isabela Rangel -->
-        <div class="team-item flex-shrink-0 mx-2" data-aos="fade-up" data-aos-delay="500">
+        <div class="team-item flex-shrink-0 mx-3" data-aos="fade-up" data-aos-delay="500">
           <div class="team-member card border-0 shadow-lg overflow-hidden h-100">
             <div class="pic d-flex align-items-center justify-content-center p-3">
               <img src="assets/img/doctors/doctors-5.jpg" class="img-fluid rounded-circle team-img" alt="Isabela Rangel">
@@ -466,7 +466,7 @@
   }
 
   .team-item {
-    width: 250px;
+    width: 220px; /* Diminui a largura do card */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -476,7 +476,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 360px;
+    min-height: 300px; /* Diminui a altura mínima do card */
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -487,7 +487,7 @@
   }
 
   .pic {
-    height: 170px;
+    height: 140px; /* Diminui a altura da imagem */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -495,8 +495,8 @@
   }
 
   .team-img {
-    width: 150px;
-    height: 150px;
+    width: 120px; /* Diminui a largura da imagem */
+    height: 120px; /* Diminui a altura da imagem */
     object-fit: cover;
     object-position: center;
     border-radius: 50%;
@@ -522,42 +522,43 @@
 
   @media (max-width: 576px) {
     .team-item {
-      width: 220px;
+      width: 200px; /* Ajusta a largura para telas pequenas */
     }
 
     .team-member {
-      min-height: 330px;
+      min-height: 270px; /* Ajusta a altura mínima do card */
     }
 
     .team-img {
-      width: 130px;
-      height: 130px;
+      width: 110px; /* Ajusta a largura da imagem */
+      height: 110px; /* Ajusta a altura da imagem */
     }
 
     .pic {
-      height: 150px;
+      height: 130px;
     }
   }
 
   @media (min-width: 992px) {
     .team-item {
-      width: 270px;
+      width: 230px; /* Ajusta a largura para telas grandes */
     }
 
     .team-member {
-      min-height: 380px;
+      min-height: 330px; /* Ajusta a altura mínima do card */
     }
 
     .pic {
-      height: 180px;
+      height: 160px;
     }
 
     .team-img {
-      width: 160px;
-      height: 160px;
+      width: 140px;
+      height: 140px;
     }
   }
 </style>
+
 
           <!-- <p>Este parágrafo está comentado e não será exibido.</p> -->
 
