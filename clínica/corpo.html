@@ -342,50 +342,41 @@
   <h2 class="text-center fw-bold">Nossos Profissionais</h2>
   <p class="text-center text-muted">Uma equipe de excelência dedicada a transformar sua experiência com soluções personalizadas.</p>
 
-  <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div id="teamCarousel" class="carousel slide" data-bs-wrap="false"> 
     <div class="carousel-inner">
 
       <!-- Slide 1 -->
       <div class="carousel-item active">
-        <div class="row justify-content-center">
-          <!-- Dra. Nathalia Xavier -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div class="card border-0 shadow-sm text-center">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm">
               <div class="card-body">
-                <img src="assets/img/doctors/doctors-1.jpg" class="img-fluid rounded-circle mb-3 team-img" alt="Dra. Nathalia Xavier">
+                <img src="assets/img/doctors/doctors-1.jpg" class="rounded-circle team-img" alt="Dra. Nathalia Xavier">
                 <h4 class="fs-6 fw-bold text-dark mb-1">Dra. Nathalia Xavier</h4>
                 <span class="text-muted small d-block mb-2">Harmonização Facial/Corporal</span>
-                <div class="social">
-                  <a href="#" class="text-primary fs-5"><i class="bi bi-instagram"></i></a>
-                </div>
+                <a href="#" class="text-primary fs-5"><i class="bi bi-instagram"></i></a>
               </div>
             </div>
           </div>
 
-          <!-- Guilherme Durso -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div class="card border-0 shadow-sm text-center">
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm">
               <div class="card-body">
-                <img src="assets/img/doctors/doctors-2.jpg" class="img-fluid rounded-circle mb-3 team-img" alt="Guilherme Durso">
+                <img src="assets/img/doctors/doctors-2.jpg" class="rounded-circle team-img" alt="Guilherme Durso">
                 <h4 class="fs-6 fw-bold text-dark mb-1">Guilherme Durso</h4>
                 <span class="text-muted small d-block mb-2">Nutricionista</span>
-                <div class="social">
-                  <a href="#" class="text-primary fs-5"><i class="bi bi-instagram"></i></a>
-                </div>
+                <a href="#" class="text-primary fs-5"><i class="bi bi-instagram"></i></a>
               </div>
             </div>
           </div>
 
-          <!-- Dra. Sarah Rosa -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div class="card border-0 shadow-sm text-center">
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm">
               <div class="card-body">
-                <img src="assets/img/doctors/doctors-3.jpg" class="img-fluid rounded-circle mb-3 team-img" alt="Dra. Sarah Rosa">
+                <img src="assets/img/doctors/doctors-3.jpg" class="rounded-circle team-img" alt="Dra. Sarah Rosa">
                 <h4 class="fs-6 fw-bold text-dark mb-1">Dra. Sarah Rosa</h4>
                 <span class="text-muted small d-block mb-2">Cirurgiã Dentista</span>
-                <div class="social">
-                  <a href="#" class="text-primary fs-5"><i class="bi bi-instagram"></i></a>
-                </div>
+                <a href="#" class="text-primary fs-5"><i class="bi bi-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -394,35 +385,28 @@
 
       <!-- Slide 2 -->
       <div class="carousel-item">
-        <div class="row justify-content-center">
-          <!-- Matheus Rodrigues -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div class="card border-0 shadow-sm text-center">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm">
               <div class="card-body">
-                <img src="assets/img/doctors/doctors-4.jpg" class="img-fluid rounded-circle mb-3 team-img" alt="Matheus Rodrigues">
+                <img src="assets/img/doctors/doctors-4.jpg" class="rounded-circle team-img" alt="Matheus Rodrigues">
                 <h4 class="fs-6 fw-bold text-dark mb-1">Matheus Rodrigues</h4>
                 <span class="text-muted small d-block mb-2">Massoterapeuta</span>
-                <div class="social">
-                  <a href="#" class="text-primary fs-5"><i class="bi bi-instagram"></i></a>
-                </div>
+                <a href="#" class="text-primary fs-5"><i class="bi bi-instagram"></i></a>
               </div>
             </div>
           </div>
 
-          <!-- Isabela Rangel -->
-          <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div class="card border-0 shadow-sm text-center">
+          <div class="col-md-4">
+            <div class="card text-center shadow-sm">
               <div class="card-body">
-                <img src="assets/img/doctors/doctors-5.jpg" class="img-fluid rounded-circle mb-3 team-img" alt="Isabela Rangel">
+                <img src="assets/img/doctors/doctors-5.jpg" class="rounded-circle team-img" alt="Isabela Rangel">
                 <h4 class="fs-6 fw-bold text-dark mb-1">Isabela Rangel</h4>
                 <span class="text-muted small d-block mb-2">Biomédica</span>
-                <div class="social">
-                  <a href="#" class="text-primary fs-5"><i class="bi bi-instagram"></i></a>
-                </div>
+                <a href="#" class="text-primary fs-5"><i class="bi bi-instagram"></i></a>
               </div>
             </div>
           </div>
-
         </div>
       </div>
 
@@ -441,28 +425,28 @@
 </section>
 
 <style>
-  .carousel-inner {
-    display: flex;
+  /* Evita que os cards fiquem desproporcionais */
+  .card {
+    height: 100%;
   }
-  .carousel-item {
-    flex: 0 0 100%;
-    display: flex;
-    justify-content: center;
-  }
+
+  /* Ajusta as imagens para não ficarem esticadas */
   .team-img {
     width: 100px;
     height: 100px;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
   }
 </style>
 
 <script>
+  // Desativa a rotação automática do carrossel
   var myCarousel = new bootstrap.Carousel(document.querySelector('#teamCarousel'), {
-    interval: 5000,
+    interval: false,
     wrap: true
   });
 </script>
-
 
 
           <!-- <p>Este parágrafo está comentado e não será exibido.</p> -->
